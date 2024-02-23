@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show/Hide a Paragraph</title>
+    <style>
+        #myParagraph {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <p id="myParagraph">This is a paragraph of text.</p>
+    <button id="toggleButton">Hide</button>
+
+    <script>
+        let paragraph = document.getElementById('myParagraph');
+        let button = document.getElementById('toggleButton');
+
+        button.addEventListener('click', function () {
+            if (paragraph.style.display === "none") {
+                paragraph.style.display = "block";
+                button.textContent = "Show";
+            } else {
+                paragraph.style.display = "none";
+                button.textContent = "Hide";
+            }
+        });
+    </script>
+
+</body>
+
+</html>

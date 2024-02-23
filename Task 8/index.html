@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Count Button Clicks</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <button id="toggleButton">Click me</button>
+    <p id="clickCount">0</p>
+
+    <script>
+        let count = 0;
+        let button = document.getElementById('toggleButton');
+        let text = document.getElementById('clickCount');
+
+        button.addEventListener('click', function() {
+            count++;
+            text.textContent = count;
+        });
+    </script>
+    
+</body>
+</html>
